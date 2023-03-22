@@ -1,0 +1,30 @@
+﻿@model List<StaffRegistration.Models.Domain.Staff>
+@{
+}
+<h1>Staff</h1>
+<table class="table">
+  <thead class="thead-dark">
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Contact Number</th>
+        <th>Date Of Birth</th>
+    </tr>
+   </thead>
+   <tbody>
+       @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.Id</td>
+                <td>@staff.Name</td>
+                <td>@staff.Email</td>
+                <td>@staff.Address</td>
+                <td>@staff.ContactNumber</td>
+                <td>@staff.DateOfBirth</td>
+                <td><a href ="Staff/View/@staff.Id">View</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>
